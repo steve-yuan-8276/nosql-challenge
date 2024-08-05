@@ -11,11 +11,13 @@ The UK Food Standards Agency evaluates various establishments across the United 
     ├── Resources/
     │   └── establishments.json
     ├── Outputs/
-    │   ├── NoSQL_setup_solution.ipynb
-    │   ├── NoSQL_Analysis_Solution.ipynb
-    ├── README.md
+    │   ├── hygiene_records.csv
+    │   ├── rating_records.csv
+    │   ├── top5_restaurants_records.csv
+    │   ├── restaurant_by_location_records.csv
     ├── NoSQL_setup_solution.ipynb
-    └── NoSQL_Analysis_Solution.ipynb
+    ├── NoSQL_Analysis_Solution.ipynb
+    └── README.md
 ```    
 
 ### Explanation
@@ -27,6 +29,8 @@ The UK Food Standards Agency evaluates various establishments across the United 
 - **Outputs/**: Directory for Jupyter Notebooks.
     - hygiene_records.csv
     - rating_records.csv
+    - top5_restaurants_records.csv
+    - restaurant_by_location_records.csv
 - **README.md**: Project description file, including project background, directory structure, and instructions.
 
 ## Solution
@@ -36,6 +40,9 @@ The UK Food Standards Agency evaluates various establishments across the United 
 Use `NoSQL_setup_solution.ipynb` for this section of the challenge.
 
 1. Import the data provided in the `establishments.json` file from your Terminal. Name the database `uk_food` and the collection `establishments`. Copy the text you used to import your data from your Terminal to a markdown cell in your notebook.
+```
+mongoimport --db uk_food --collection establishments --file ./Resources/establishments.json --jsonArray
+```
 
 2. Confirm that you created the database and loaded the data properly:
 
